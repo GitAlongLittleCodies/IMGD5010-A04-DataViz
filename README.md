@@ -1,4 +1,4 @@
-<p align="center">Todd Stewart &bull; 2026 FEB 16</p>
+<p align="center">Todd Stewart &bull; 2026 FEB 16</p> 
 
 # IMGD 5010 &bull; Assignment 06: Data Visualization
 
