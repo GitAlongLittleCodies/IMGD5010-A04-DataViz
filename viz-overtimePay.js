@@ -54,9 +54,9 @@ function draw() {
     let overtimePay = int(myData[i]._2024_overtime_pay);
     let longevityPay = int(myData[i]._2024_longevity_pay);
     let totalPay = basePay + overtimePay + longevityPay ;
-    let gender = myData[i].gender;
+    let partsTest = myData[i].gender;
     
-    employeePay(i, basePay, overtimePay, longevityPay, totalPay, gender);
+    employeePay(i, basePay, overtimePay, longevityPay, totalPay, partsTest);
 
     // print('person: ' + i + '    base: ' + basePay + '    overtime: ' + overtimePay + '    longevity: ' + longevityPay + '    total: ' + totalPay);
 
@@ -68,16 +68,17 @@ function draw() {
 }
 
 
-function employeePay(i, basePay, overtimePay, longevityPay, totalPay, gender) {
+function employeePay(i, basePay, overtimePay, longevityPay, totalPay, partsTest) {
 
-  if (gender==='m' || gender==='M') 
-    { hue = hue00;} 
-  else { hue = hue01; }
+  if (partsTest==='m' || partsTest==='M') 
+    { myHue = hue00;} 
+  else { myHue = hue01; }
+  
     translate(40+80*i,height*.66);
   
     // total
     push();
-    fill(hue,100,50,1);
+    fill( myHue , 100, 50,1);
     noStroke();
     rect(0,0,10,-totalPay/1000); 
     pop()
@@ -85,23 +86,23 @@ function employeePay(i, basePay, overtimePay, longevityPay, totalPay, gender) {
     // longevity
     push()
     textAlign(LEFT)
-    fill(hue,100,100 * ( 1 - (longevityPay/totalPay) ) ,1);
+    fill( myHue , 100, 100 * ( 1 - (longevityPay/totalPay) ) ,1);
     rect(10,-longevityPay/1000,
           70, longevityPay/1000);
     pop()
 
     // base pay
-    fill(hue,100,100 * ( 1 - (basePay/totalPay) ) ,1);
+    fill( myHue , 100, 100 * ( 1 - (basePay/totalPay) ) ,1);
     rect( 10, -longevityPay/1000, 
           70, -basePay/1000 );
 
     // overtime pay
-    fill(hue,100,100 * ( 1 - (overtimePay/totalPay) ) ,1);
+    fill( myHue , 100, 100 * ( 1 - (overtimePay/totalPay) ) ,1);
     rect(10,-basePay/1000-longevityPay/1000-overtimePay/1000,
           70, overtimePay/1000);
 
     // text
-    fill(hue,100,100,1);
+    fill( myHue , 100, 100, 1);
     push();
   textStyle(BOLD);
   textSize(16);
