@@ -9,7 +9,7 @@ What I set out to do was to look at the Top 10 Overtime Pay earners in the Montg
 ---
 ### Color Coding Genders
 
-It's easy to add another dimension to the visualization by including color-coding by gender. In this use, though, I think it confuses the focus of looking at the ratio of overtime pay to the base salary.
+It's easy to add another dimension to the visualization by including color-coding by gender. I think in this use, it's a distration from the real focus of overtime to base pay ratio.
 
 <img width="1009" height="500" alt="image" src="https://github.com/user-attachments/assets/a2b001c2-6de7-4a5d-aee2-29a48c21406a" />
 
