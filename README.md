@@ -1,6 +1,6 @@
 <p align="center">Todd Stewart &bull; 2026 FEB 16</p> 
 
-# IMGD 5010 &bull; Assignment 06: Data Visualization
+# IMGD 5010 &bull; Assignment 04: Data Visualization
 
 ### [Sketch & Edit](https://editor.p5js.org/GitAlongLittleCodies/sketches/h1oQibN9k) -or- [Sketch Only](https://editor.p5js.org/GitAlongLittleCodies/full/h1oQibN9k)
 
