@@ -1,5 +1,5 @@
 // Visualizing data from MontgomeryData 2024 Employee Salary dataset
-
+ 
 // Question
 // - When declaring a *new* variable from within setup() - why does it act like a local var when including 'let' and a global var when omitted?
 // - To test if the data loaded, you can't declare the vars outside setup() -OR- could you test to make sure they aren't empty? No way to test that they are complete
