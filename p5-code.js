@@ -90,7 +90,7 @@ function employeePay( i, basePay, overtimePay, longevityPay, totalPay, partsTest
   
     // total
     push();
-      fill(hue00, 15, 50, 1);
+      fill(myHue, 15, 50, 1);
       noStroke();
       rect(2, 0, 5, -totalPay / 1000 - 50);
       rect(2, -totalPay / 1000 - 51, 74, 25)
@@ -103,24 +103,24 @@ function employeePay( i, basePay, overtimePay, longevityPay, totalPay, partsTest
     // longevity
     push();
       textAlign(LEFT);
-      fill(hue00, 100, 100 * (1 - longevityPay / totalPay), 1);
+      fill(myHue, 100, 100 * (1 - longevityPay / totalPay), 1);
       rect(10, -longevityPay / 1000, 70, longevityPay / 1000);
     pop();
 
     // base pay
     // fill(myHue, 100, 100 * (1 - basePay / totalPay), 1);
-    fill(hue00, 100, 70, 1);
+    fill(myHue, 100, 70, 1);
     rect(10, -longevityPay / 1000, 70, -basePay / 1000);
 
     // overtime pay
     // fill(myHue, 100, 100 * (1 - overtimePay / totalPay), 1);
-    fill(hue00, 100, 35, 1);
+    fill(myHue, 100, 35, 1);
     rect(
       10, -basePay / 1000 - longevityPay / 1000 - overtimePay / 1000,
       70, overtimePay / 1000 );
 
     // 'Salary' and 'Overtime' labels
-    fill(hue00, 100, 100, 1);
+    fill(myHue, 100, 100, 1);
     // text('- Other: ' + round(longevityPay/totalPay*100,1) + '% -', 40, 30);
     text(
       "Salary:\n" + round((basePay / totalPay) * 100, 1) + "%",
