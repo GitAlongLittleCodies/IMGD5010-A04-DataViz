@@ -12,8 +12,8 @@ let freezeMyFrame = true;
 let myFrame = 1;
 // =========================
 
-let hue00 = "50";
-let hue01 = "125";
+let hue00 = "175";
+let hue01 = "175";
 
 function setup() {
   background(125);
@@ -55,13 +55,13 @@ function draw() {
 
       let basePay = int(myData[i].base_salary);
       let overtimePay = int(myData[i]._2024_overtime_pay);
-      let longevityPay = int(myData[i]._2024_longevity_pay);
+      let longevityPay = 0; // int(myData[i]._2024_longevity_pay);
       let totalPay = basePay + overtimePay + longevityPay;
       let partsTest = myData[i].gender;
       
       employeePay(i, basePay, overtimePay, longevityPay, totalPay, partsTest);
       
-      print('person: ' + i + '    base: ' + basePay + '    overtime: ' + overtimePay + '    longevity: ' + longevityPay + '    total: ' + totalPay);
+      // print('person: ' + i + '    base: ' + basePay + '    overtime: ' + overtimePay + '    longevity: ' + longevityPay + '    total: ' + totalPay);
 
       
     }
@@ -80,18 +80,21 @@ function employeePay(
   totalPay,
   partsTest
 ) {
-  if (partsTest === "m" || partsTest === "M") {
-    myHue = hue00;
-  } else {
-    myHue = hue01;
-  }
-  translate(40 + 80 * i, height * 0.66);
-
+  if (partsTest === "m" || partsTest === "M") { myHue = hue00; } 
+    else { myHue = hue01; }
+  push()
+  translate(40 + 100 * i, height * 0.66);
+    
   // total
   push();
-  fill(myHue, 100, 50, 1);
+  fill(myHue, 15, 50, 1);
   noStroke();
-  rect(0, 0, 10, -totalPay / 1000);
+  rect(2, 0, 5, -totalPay / 1000 - 50);
+  rect(2, -totalPay / 1000 - 51, 74, 25)
+  fill(myHue, 55, 15, 1);
+  textStyle(BOLD);
+  textSize(16);
+  text( "$" + nfc(totalPay), 39, -totalPay / 1000 - 32);
   pop();
 
   // longevity
@@ -102,11 +105,13 @@ function employeePay(
   pop();
 
   // base pay
-  fill(myHue, 100, 100 * (1 - basePay / totalPay), 1);
+  // fill(myHue, 100, 100 * (1 - basePay / totalPay), 1);
+  fill(myHue, 100, 70, 1);
   rect(10, -longevityPay / 1000, 70, -basePay / 1000);
 
   // overtime pay
-  fill(myHue, 100, 100 * (1 - overtimePay / totalPay), 1);
+  // fill(myHue, 100, 100 * (1 - overtimePay / totalPay), 1);
+  fill(myHue, 100, 35, 1);
   rect(
     10,
     -basePay / 1000 - longevityPay / 1000 - overtimePay / 1000,
@@ -116,15 +121,15 @@ function employeePay(
 
   // text
   fill(myHue, 100, 100, 1);
-  push();
-  textStyle(BOLD);
-  textSize(16);
-  text(
-    "$" + nfc(totalPay),
-    39,
-    -basePay / 1000 - overtimePay / 1000 - longevityPay / 1000 - 5
-  );
-  pop();
+  // push();
+  // textStyle(BOLD);
+  // textSize(16);
+  // text(
+  //   "$" + nfc(totalPay),
+  //   39,
+  //   -basePay / 1000 - overtimePay / 1000 - longevityPay / 1000 - 5
+  // );
+  // pop();
   text("Employee " + (i + 1), 40, 15);
   // text('- Other: ' + round(longevityPay/totalPay*100,1) + '% -', 40, 30);
   text(
@@ -137,6 +142,7 @@ function employeePay(
     45,
     -basePay / 1000 - overtimePay / 2000 - 10
   );
+    pop()
 }
 
 function mousePressed() {
