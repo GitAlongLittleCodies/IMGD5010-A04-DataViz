@@ -4,7 +4,7 @@
 // - When declaring a *new* variable from within setup() - why does it act like a local var when including 'let' and a global var when omitted?
 // - To test if the data loaded, you can't declare the vars outside setup() -OR- could you test to make sure they aren't empty? No way to test that they are complete
 
-// Data source = https://data.montgomerycountymd.gov/Human-Resources/Employee-Salaries-2024/2nq6-auk8/data_preview
+// Data source = https://data.montgomerycountymd.gov/Human-Resources/Employee-Salaries-2024/2nq6-auk8/about_data
 // Definitions = https://dev.socrata.com/foundry/data.montgomerycountymd.gov/2nq6-auk8
 
 // Freeze Frame in use =====
