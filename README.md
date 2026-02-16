@@ -13,7 +13,7 @@ I successfully completed all the steps of the assignment: improved my skills usi
 ---
 ### Unexercised Option: Color Coding
 
-It's easy to add a color-coding layer to the visualization such as indicating the gender of the employee, as indicated in the image below. <br>In this case, I feel as though the additional information detracts from the focus of the ratio of overtime pay to base pay.
+It's easy to add a color-coding layer to the visualization such as indicating the gender of the employee, as indicated in the image below. In this case, I feel as though the additional information detracts from the focus of the ratio of overtime pay to base pay.
 
 <img width="1009" height="500" alt="image" src="https://github.com/user-attachments/assets/a2b001c2-6de7-4a5d-aee2-29a48c21406a" />
 
